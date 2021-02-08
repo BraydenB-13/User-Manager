@@ -1,0 +1,25 @@
+html
+    head
+        title User Manager
+    body
+        h2 Edit Users
+            table
+                tr
+                    th ID
+                    th Name
+                    th Email
+                    th Age
+                each user in users
+                    form(method='POST', action='/update')
+                        tr
+                            td #{user.id}
+                                input(name='id', type='hidden', value=user.id)
+                            td
+                                input(name='username', type='text', value=user.username)
+                            td
+                                input(name='email', type='email', value=user.email)
+                            td
+                                input(name='age', type='number', value=user.age)
+                            td
+                                input(type='submit')
+        a(href='/') Home

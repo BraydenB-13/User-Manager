@@ -1,0 +1,21 @@
+html
+    head
+        title User Manager
+    body
+        h2 Users List
+        table
+            tr
+                th ID
+                th Name
+                th Email
+                th Age
+                th Edit
+            each user in users
+                tr
+                    td #{user.id}
+                    td #{user.username}
+                    td #{user.email}
+                    td #{user.age}
+                    td
+                        a(href='/edit') Edit
+    a(href='/') Home
